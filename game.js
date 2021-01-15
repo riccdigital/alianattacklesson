@@ -108,4 +108,6 @@ function endGame () {
     output.innerHTML = 'You Lost!'
     gameover.style.display = 'block'
   }
+
+  button.disabled = true
 }
