@@ -1,4 +1,7 @@
 // == GAME VARIABLES == //
+// == Stage Dimensions Variables == //
+const stageY = 300
+
 // Alien Position //
 let alienX = 80
 let alienY = 20
@@ -18,6 +21,7 @@ const cannon = document.getElementById('cannon')
 const alien = document.getElementById('alien')
 const missile = document.getElementById('missile')
 const explosion = document.getElementById('explosion')
+const gameover = document.getElementById('gameover')
 
 // Controls //
 const output = document.getElementById('output')
@@ -54,6 +58,7 @@ function playGame () {
   shotsRemaining = shotsRemaining - 1
   shotsMade = shotsMade + 1
   gameState = 'Shots: ' + shotsMade + ', Remaining: ' + shotsRemaining
+  const endPosition = stageY - 80
 
   if (guessX >= alienX && guessX <= alienX + 20) {
     if (guessY >= alienY && guessY <= alienY + 20) {
@@ -62,7 +67,7 @@ function playGame () {
     }
   } else {
     output.innerHTML = 'Miss!' + gameState
-    if (shotsRemaining < 1) {
+    if (shotsRemaining < 1 || alienY >= endPosition) {
       endGame()
     }
   } if (!gameWon) {
@@ -98,8 +103,9 @@ function render () {
 function endGame () {
   if (gameWon) {
     output.innerHTML = 'Hit! You saved the Earth!' + '<br>' +
-    'It took you ' + shotsMade + ' shots.'
+      'It took you ' + shotsMade + ' shots.'
   } else {
     output.innerHTML = 'You Lost!'
+    gameover.style.display = 'block'
   }
 }
