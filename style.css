@@ -63,8 +63,9 @@ body{
 
 #explosion{
     display: none;
-    width: 15px;
-    height: 15px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
     left: 0;
     top: 0;
     background-image: url(images/explosion.png);

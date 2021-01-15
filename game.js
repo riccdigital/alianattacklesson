@@ -42,6 +42,8 @@ function validateInput () {
 
   if (isNaN(guessX) || isNaN(guessY)) {
     output.innerHTML = 'Please enter a number!'
+  } else if (guessX > 300 || guessY > 300) {
+    output.innerHTML = 'Please enter a number less than 300'
   } else {
     playGame()
   }
