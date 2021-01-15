@@ -45,6 +45,7 @@ body{
     top: 20px;
     left: 80px;
     background-image: url(images/alien.png);
+    display: block;
     
 }
 
@@ -57,4 +58,14 @@ body{
     background-image: url(images/missile.png);
     background-repeat: no-repeat;
     background-size: cover;
+    display: block;
+}
+
+#explosion{
+    display: none;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 0;
+    background-image: url(images/explosion.png);
 }
