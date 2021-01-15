@@ -1,0 +1,64 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#stage{
+    width: 600px;
+    height: 600px;
+    position: relative;
+    border: 1px solid black;
+}
+
+#background{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#cannon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 540px;
+    left: 280px;
+    background-image: url(images/cannon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#alien{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    left: 160px;
+    background-image: url(images/alien.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#missile{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 480px;
+    left: 290px;
+    background-image: url(images/missile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
