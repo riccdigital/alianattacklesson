@@ -110,4 +110,5 @@ function endGame () {
   }
 
   button.disabled = true
+  location.reload()
 }
